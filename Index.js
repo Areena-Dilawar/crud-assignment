@@ -17,18 +17,23 @@ let cars = [
 
 app.post('/books/add', (req, res) => {
     res.send('Book added');
+    console.log(req.query)
 });
 
 app.get('/books/list', (req, res) => {
     res.json(books);
+    console.log(req.headers)
 });
 
 app.put('/books/update', (req, res) => {
-    res.send('Book Updated');
+    res.send('Book Update');
+    console.log(req.params)
 });
 
 app.delete('/books/delete', (req, res) => {
     res.send('Book deleted');
+    console.log(req.body)
+
 });
 
 
@@ -41,7 +46,7 @@ app.get('/cars/list', (req, res) => {
 });
 
 app.put('/cars/update', (req, res) => {
-    res.send('Car Updated');
+    res.send('Car Update');
 });
 
 app.delete('/cars/delete', (req, res) => {
